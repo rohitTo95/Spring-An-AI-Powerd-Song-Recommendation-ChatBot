@@ -1,0 +1,80 @@
+import speech_recognition as sr
+import pyttsx3
+import win32com.client
+from config import apikey
+import openai
+import os
+import pywhatkit
+
+openai.api_key = apikey
+user_message_list = []
+response_message_list = []
+first_response = openai.ChatCompletion.create(
+    model="gpt-3.5-turbo",
+    messages=[
+        {"role": "system",
+         "content": "Your name is Spring. And User is your master, but you will take to him/her like a best friend. Make them feel good about themselves.You are an AI chatbot.You will chat with the user over topics they want to talk and you will suggest them songs if they ask you to suggest song of any genre. Song format will be: Song_Name - By Song_Artist_Name. Suggest atmost 10 songs."},
+    ]
+)
+
+
+def chatBot(input_of_user):
+        user_message_list.append({'role': 'system',
+                                  'content': 'Your name is Spring. And User is your master,you are developed by a group of computer science engineering student of Siliguri Government Polytechnic,named Rohit Dutta,Kasturi Bagchi,Abir Das,Aniket Dey Sarkar and Koyena Das, but you will take to him/her like a best friend. Make them feel good about themselves.You are an AI chatbot.You will chat with the user over topics they want to talk and you will suggest them songs if they ask you to suggest you song of any genre. Song format will be: Song_Name - By Song_Artist_Name. Suggest atmost 10 songs.'})
+        user_message_list.append({'role': 'user', 'content': input_of_user})
+
+        user_query = openai.ChatCompletion.create(
+            model="gpt-3.5-turbo",
+            messages=user_message_list
+        )
+
+        chat_response = user_query['choices'][0]['message']['content']
+        response_message_list.append({'role': 'assistant', 'content': chat_response})
+        return chat_response
+
+
+
+speaker = win32com.client.Dispatch("SAPI.SpVoice")
+
+
+def speak(message):
+    engine = pyttsx3.init()
+    voices = engine.getProperty('voices')
+    engine.setProperty('voice', voices[1].id)  # Set the index of the desired female voice
+    engine.say(message)
+    engine.runAndWait()
+
+
+def takeCommand():
+    r = sr.Recognizer()
+    with sr.Microphone() as source:
+        r.pause_threshold = 1
+        r.energy_threshold = 4000  # Adjust this value based on your microphone sensitivity
+        audio = r.listen(source, phrase_time_limit=3)  # Set the maximum length of an utterance
+        try:
+            print("Recognizing...")
+            query = r.recognize_google(audio, language="en-in")
+            print(f"User said: {query}")
+            return query
+        except Exception as e:
+            print("Some Error Occurred. Sorry  from Spring", e)
+            return ""
+
+
+if __name__ == '__main__':
+    print('Welcome to ChatBot')
+    speak("Hello, I am Spring. How can I help you?")  # Use the modified speak function
+    while True:
+        print("Listening...")
+        query = takeCommand()
+        if "play" in query and "YouTube" in query:
+            song_name = query.replace("play", "").replace("YouTube", "").strip()
+            pywhatkit.playonyt(song_name)
+            response = f"Playing {song_name} on YouTube. Enjoy!"
+        else:
+            response = chatBot(query)
+        print(f"Spring: {response}")
+        speak(response)
+
+
+
