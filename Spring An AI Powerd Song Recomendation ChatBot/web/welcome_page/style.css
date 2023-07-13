@@ -1,0 +1,51 @@
+@import "../global_utils.css";
+
+body {
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    overflow: hidden;
+}
+
+.image_container {
+    width: 100vw;
+    height: 60vh;
+}
+
+p {
+    font-size: 3vw;
+    font-weight: 600;
+}
+
+.btn {
+    box-shadow: 7px 7px 18px 2px rgba(0, 0, 0, 0.60);
+    background-color: var(--black-color);
+    border-radius: 68px;
+    font-size: 3vw;
+    font-weight: 400;
+    display: flex;
+    width: 21vw;
+    align-items: center;
+    height: 7vw;
+    position: absolute;
+    bottom: 3%;
+    left: 50%;
+    transform: translateX(-50%);
+    justify-content: center;
+    transition: .9s;
+}
+
+.btn:hover {
+    background-color: var(--white-color);
+}
+.btn span{
+    color: var(--white-color);
+}
+.btn:hover span{
+    transition: .9s;
+    color: var(--black-color);
+}
+.btn:hover #arrow_svg{
+    transition: .9s;
+    fill: var(--black-color);
+}

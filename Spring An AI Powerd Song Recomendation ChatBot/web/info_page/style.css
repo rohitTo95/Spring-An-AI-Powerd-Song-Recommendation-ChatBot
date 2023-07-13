@@ -1,0 +1,81 @@
+@import "../global_utils.css";
+
+
+.header {
+    width: 100%;
+    height: 10vh;
+    background: black;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding: 0px 12px;
+}
+
+.header img {
+    width: 50px;
+}
+
+.main h2 {
+    text-transform: capitalize;
+    text-align: center;
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.main span {
+    width: 22vw;
+    height: 8px;
+    border-radius: 22px;
+    background: var(--light-theame-color);
+    display: block;
+    margin: auto;
+}
+
+.container img {
+    margin: 30px auto;
+}
+
+.info_container {
+    width: 60%;
+    padding: 0px 42px;
+
+}
+
+.info_container p {
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.btn {
+    width: 29%;
+    background: black;
+    border-radius: 46px;
+    display: flex;
+    align-items: center;
+    color: wheat;
+    height: 53px;
+    padding-left: 25px;
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.main h4 {
+    text-align: center;
+    text-transform: capitalize;
+    font-size: 27px;
+    font-weight: 500;
+}
+
+.prime_btn {
+    transform: translateX(204%);
+    width: 20%;
+    height: 53px;
+    border-radius: 42px;
+    background: #1FB6EA;
+    display: flex;
+    align-items: center;
+    color: var(--white-color);
+    font-size: 36px;
+    font-weight: 400;
+    padding-left: 46px;
+}
