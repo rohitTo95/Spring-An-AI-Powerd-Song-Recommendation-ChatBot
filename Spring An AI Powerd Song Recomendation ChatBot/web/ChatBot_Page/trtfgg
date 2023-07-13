@@ -1,0 +1,32 @@
+   <div class="user_message_area flex flex_direction_c">
+            <img src="../site-assets/user_image/default.svg" alt=""class="chating_icon">
+            <div class="user_chatMessage">
+              <p></p>
+            </div>
+        </div> 
+
+
+
+
+
+
+        <div class="box_container flex justify_sb_flex_center" id="prompt_area">
+            <div class="prompts flex flex_direction_c">
+              <img src="assets/M1.svg" alt="" class="auto_margin">
+              <p class="auto_margin">Search songs</p>
+              <button class="auto_margin prompt-options">i want to listen to ed-sheeran</button>
+              <button class="auto_margin prompt-options">Arijit Singh famous songs</button>
+            </div>
+            <div class="prompts flex flex_direction_c">
+              <img src="assets/Export.svg" alt="" class="auto_margin">
+              <p class="auto_margin">Suggest according to your mood</p>
+              <button class="auto_margin prompt-options">Suggest me some happy songs</button>
+              <button class="auto_margin prompt-options">Suggest me dj songs</button>
+            </div>
+            <div class="prompts flex flex_direction_c">
+              <img src="assets/Alert-1.svg" alt="" class="auto_margin">
+              <p class="auto_margin">Limitation</p>
+              <button class="auto_margin">1MB data Speed is needed</button>
+              <button class="auto_margin">Only have data of the world after 2021</button>
+            </div>
+          </div>

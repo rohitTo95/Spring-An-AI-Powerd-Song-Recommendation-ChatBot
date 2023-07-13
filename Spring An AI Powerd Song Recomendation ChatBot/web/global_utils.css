@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400;500;600;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Baloo Bhai 2', cursive;
+}
+
+/* color variables */
+
+:root{
+    --white-color: rgb(255, 255, 255);
+    --black-color: rgb(0, 0, 0);
+    --link-color: #38ADFF;
+    --light-theame-color: #2BC9FF;
+    --dark-theame-color: #1B2F35;
+    --chating-color: #0F1A36;
+    --chating-userInput-color: #03052F;
+    --pink-color: #EE4AFC;
+    --green-color: #41B453;
+    --red-color: #FF0000;
+    --yellow-color: #FFD600;
+}
+
+/* css classes */
+
+
+
+.cursor_pointer{
+    cursor: pointer;
+}
+
+
+/* height&width  */
+
+.height_80_per{
+ height: 80%;
+}
+.width_80_per{
+    width: 80% !important;
+}
+/* text   */
+
+.text_center{
+    text-align: center;
+}
+.text_decoration{
+    text-decoration: none;
+}
+
+/* margin  */
+
+
+.auto_margin{
+    margin: auto;
+}
+.m1{
+    margin: 10px;
+}
+.m2{
+    margin: 20px;
+}
+.m3{
+    margin: 30px;
+}
+.m4{
+    margin: 40px;
+}
+.mt1{
+    margin-top: 10px;
+}
+.mt2{
+    margin-top: 20px;
+}
+.mt3{
+    margin-top: 30px;
+}
+.mY2{
+    margin: 24px 0px;
+}
+
+
+/* display */
+
+.dis_block {
+    display: block;
+  }
+  
+  .dis_none {
+    display: none;
+  }
+  
+  .flex {
+    display: flex;
+  }
+
+/* flex Box  */
+.flex{
+    display: flex;
+}
+.all_flex_center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.flex_y_center_x_space_between{
+    justify-content: space-between;
+    align-items: center;
+}
+.flex_direction_c{
+    flex-direction: column;
+}
+.flex_direction_cr{
+    flex-direction: column-reverse;
+}
+.align_center{
+    align-items: center;
+}
+.flex_align_center{
+    align-items: center;
+}
+
+
+
+
+/* padding */
+
+.padding_left_2{
+    padding-left: 24px;
+}
+
+
+/* Fonts  */
+
+.font_size_2vw{
+    font-size: 2vw;
+}
+
+
+/* position */
+
+.ab_position{
+    position: absolute;
+}
+.re_position{
+    position: relative;
+}
+.fix_position{
+    position: fixed;
+}

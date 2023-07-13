@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spring ChatBot</title>
+  <link rel="shortcut icon" href="../../site-assets/Mr_Bot.png" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="../../global_utils.css">
+</head>
+
+<body>
+    <header class="flex flex_y_center_x_space_between">
+      <div class="header-left"><img src="assets/logo.png" class="cursor_pointer" alt="Logo">
+        <div class="internet_status">
+          <span id="in_status_ball"></span>
+          <p id="in_status_text">Online</p>
+        </div>
+      </div>
+      <div class="header-right">
+        <a href="../.../user_panel_page/index.html" class="header_btns">
+        <svg class="cursor_pointer" width="53" height="54" viewBox="0 0 53 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M26.765 28.7225C26.6104 28.7004 26.4117 28.7004 26.235 28.7225C22.3483 28.59 19.2566 25.41 19.2566 21.5012C19.2566 17.5041 22.4808 14.2579 26.5 14.2579C30.4971 14.2579 33.7433 17.5041 33.7433 21.5012C33.7212 25.41 30.6517 28.59 26.765 28.7225Z" stroke="white" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M41.3842 43.2977C37.4533 46.8973 32.2417 49.0836 26.5 49.0836C20.7583 49.0836 15.5467 46.8973 11.6158 43.2977C11.8367 41.2219 13.1617 39.1902 15.5246 37.6002C21.5754 33.5811 31.4687 33.5811 37.4754 37.6002C39.8383 39.1902 41.1633 41.2219 41.3842 43.2977Z" stroke="white" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M26.5 49.0833C38.6961 49.0833 48.5833 39.1962 48.5833 27C48.5833 14.8037 38.6961 4.91666 26.5 4.91666C14.3037 4.91666 4.41663 14.8037 4.41663 27C4.41663 39.1962 14.3037 49.0833 26.5 49.0833Z" stroke="white" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+
+        <a href="../user_panel_page/index.html" class="header_btns">
+          <svg  class="cursor_pointer" width="52" height="52" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M46.9299 22.62L44.8066 31.6767C42.9866 39.4983 39.3899 42.6617 32.6299 42.0117C31.5466 41.925 30.3766 41.73 29.1199 41.4267L25.4799 40.56C16.4449 38.415 13.6499 33.9517 15.7733 24.895L17.8966 15.8167C18.3299 13.975 18.8499 12.3717 19.4999 11.05C22.0349 5.80669 26.3466 4.39836 33.5833 6.11002L37.2016 6.95502C46.2799 9.07836 49.0533 13.5634 46.9299 22.62Z" stroke="white" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M32.6299 42.0119C31.2866 42.9219 29.5966 43.6802 27.5383 44.3519L24.1149 45.4786C15.5132 48.2519 10.9849 45.9336 8.18988 37.3319L5.41655 28.7736C2.64322 20.1719 4.93988 15.6219 13.5416 12.8485L16.9649 11.7219C17.8532 11.4402 18.6982 11.2019 19.4999 11.0502C18.8499 12.3719 18.3299 13.9752 17.8965 15.8169L15.7732 24.8952C13.6499 33.9519 16.4449 38.4152 25.4799 40.5602L29.1199 41.4269C30.3766 41.7302 31.5466 41.9252 32.6299 42.0119Z" stroke="white" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+
+          <a href="../user_panel_page/index.html" class="header_btns">
+            <svg  class="cursor_pointer" width="57" height="58" viewBox="0 0 57 58" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M24.7 18.3125C24.7 14.3775 21.51 11.1875 17.575 11.1875C13.6399 11.1875 10.45 14.3775 10.45 18.3125C10.45 22.2475 13.6399 25.4375 17.575 25.4375C21.51 25.4375 24.7 22.2475 24.7 18.3125Z" stroke="white" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M21.1375 32.5625H14.0125C12.045 32.5625 10.45 34.1575 10.45 36.125V43.25C10.45 45.2175 12.045 46.8125 14.0125 46.8125H21.1375C23.105 46.8125 24.7 45.2175 24.7 43.25V36.125C24.7 34.1575 23.105 32.5625 21.1375 32.5625Z" stroke="white" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M46.075 39.6875C46.075 35.7524 42.8849 32.5625 38.95 32.5625C35.0148 32.5625 31.825 35.7524 31.825 39.6875C31.825 43.6226 35.0148 46.8125 38.95 46.8125C42.8849 46.8125 46.075 43.6226 46.075 39.6875Z" stroke="white" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M39.1875 11.52L31.825 24.25H46.55L39.1875 11.52Z" stroke="white" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+
+            <a href="../user_panel_page/index.html" class="header_btns">
+              <svg class="cursor_pointer" id="powerOff_btn" width="62" height="62" viewBox="0 0 62 62" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M38.75 17.4116C42.0851 19.1468 44.7416 21.951 46.2936 25.3751C47.846 28.7993 48.204 32.6453 47.311 36.2971C46.4179 39.9489 44.3249 43.1954 41.3677 45.5168C38.4103 47.8379 34.7596 49.0996 31 49.0996C27.2405 49.0996 23.5898 47.8379 20.6325 45.5168C17.6751 43.1954 15.5823 39.9489 14.6891 36.2971C13.796 32.6453 14.1542 28.7993 15.7064 25.3751C17.2585 21.951 19.9149 19.1468 23.25 17.4116" stroke="white" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M31 12.9167V28.4167" stroke="white" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                </a>
+      </div>
+    </header>
+    <main >
+
+      <!-- suggestion and message box area  -->
+
+      <div class="box_container flex flex_y_center_x_space_between" id="prompt_area">
+        <div class="prompts flex flex_direction_c">
+          <img src="assets/m.png" alt="" class="auto_margin">
+          <p class="auto_margin">Search songs</p>
+          <button class="auto_margin prompt-options">i want to listen to ed-sheeran</button>
+          <button class="auto_margin prompt-options">Arijit Singh famous songs</button>
+        </div>
+        <div class="prompts flex flex_direction_c">
+          <img src="assets/Export.svg" alt="" class="auto_margin">
+          <p class="auto_margin">Suggest according to your mood</p>
+          <button class="auto_margin prompt-options">Suggest me some happy songs</button>
+          <button class="auto_margin prompt-options">Suggest me dj songs</button>
+        </div>
+        <div class="prompts flex flex_direction_c">
+          <img src="assets/Alert-1.svg" alt="" class="auto_margin">
+          <p class="auto_margin">Limitation</p>
+          <button class="auto_margin">1MB data Speed is needed</button>
+          <button class="auto_margin">Only have data of the world after 2021</button>
+        </div>
+      </div>
+<section id="chating_area_user_chatBot"></section>
+      <!-- suggestion and message box area  -->
+      <!-- chating Box -->
+      <!-- <div class="chatBox" id="chatBox_con">
+      <div class="chatBot_area flex flex_direction_cr" >
+          <img src="../site-assets/Mr_Bot.png" alt="" class="chating_icon">
+          <div class="bot_chatMessage">
+            <p></p>
+          </div>
+        </div>
+      </div> -->
+      <!-- chatng box -->
+    </main>
+    <footer class="flex all_flex_center">
+      <div class="user_input_area flex all_flex_center">
+        <input placeholder="Enter Your Prompt Here" id="user_input">
+        <img src="assets/Button.svg" alt="AI" id="ai_btn" class="cursor_pointer">
+        <img src="assets/Button-1.svg" id="sent_btn" class="cursor_pointer">
+      </div>
+    </footer>
+  <script src="/web_files/ChatBot_Page/web/eel.js"></script>
+  <script src="/web_files/ChatBot_Page/web/script.js"></script>
+</body>
+
+</html>
