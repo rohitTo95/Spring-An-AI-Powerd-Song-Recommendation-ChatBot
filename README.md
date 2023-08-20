@@ -62,7 +62,9 @@ To use Spring, follow these simple steps:
 
     You can now use voice commands to interact with Spring.
 
-    And to go back to cahtbot mode, say: /spring assistant mode.
+    To play songs on YouTube say: play Song Name
+
+    And to go back to cahtbot mode, say: spring chatbot mode.
 
 Enjoy Chatting with Spring! 🌼
 
