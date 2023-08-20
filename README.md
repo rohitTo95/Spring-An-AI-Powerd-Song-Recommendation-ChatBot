@@ -1,4 +1,4 @@
-# Spring-An-AI-Powerd-Song-Recommendation-ChatBot
+# Spring-An-AI-Powerd-Song-Recommendation-ChatBot (Only For Windows)
 # Spring ChatBot 🤖🌸
 
 Welcome to Spring, your friendly AI ChatBot! Spring is designed to chat with you on a wide range of topics and even recommend songs. Let's dive into how this works and how you can use it. 🎉
