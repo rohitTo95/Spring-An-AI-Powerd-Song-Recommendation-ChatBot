@@ -95,7 +95,7 @@ def start_voice_assistant():
             song_name = query.replace("play", "").strip()
             pywhatkit.playonyt(song_name)
             response = f"Playing {song_name} on YouTube. Enjoy!"
-        elif "spring chatbot mode" in query.lower():
+        elif "spring chatbot mode" in query.lower() or "spring chat bot mode" in query.lower():
             break
         else:
             response = chatBot(query)
